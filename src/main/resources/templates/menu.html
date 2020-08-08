@@ -26,13 +26,19 @@
 </div>
 
 <div>
-    <th:block th:if="${manipedi} == 'manicure'">
+    <th:block th:if="${manipedi} == 'Manicure'">
         <h3>Manicure</h3>
         <p th:replace="fragments :: manicureDescription"></p>
     </th:block>
 
-    <th:block th:if="${manipedi} == 'pedicure'">
+    <th:block th:if="${manipedi} == 'Pedicure'">
         <h3>Pedicure</h3>
+        <p th:replace="fragments :: pedicureDescription"></p>
+    </th:block>
+
+    <th:block th:if="${manipedi} == 'Both'">
+        <h3>Manicure and Pedicure</h3>
+        <p th:replace="fragments :: manicureDescription"></p>
         <p th:replace="fragments :: pedicureDescription"></p>
     </th:block>
 </div>
